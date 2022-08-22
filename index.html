@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  </head>
+  <body>
+    <form id="regForm" action="" method="post" autocomplete = "off">
+      <h1 align = center>Formulaire d'inscription</h1>
+        <Fieldset class="fieldset">
+            <div class="tab" id = "tab-1">
+                <p>Information élève:</p><br>
+                <div class="nom">
+                    <div class="input-field">
+                    <label for="nom">Nom</label>
+                    <p><input placeholder="Nom" oninput="this.className = ''" name="" id="nomeleve" required ></p>
+                </div>
+                <div class="input-field">
+                    <label for="prénom">Prénom</label>
+                    <p><input placeholder="Prénom" oninput="this.className = ''" name="" id="prenomeleve" required ></p>
+                </div>
+   
+                </div>
+                <div class="naissance">
+                    <div class="input-field">
+                    <label for="date">Date de naissance</label>
+                    <p><input type="date" placeholder="Date de naissance" oninput="this.className = ''" name="" id="dateeleve" ></p>
+                </div>
+
+                <div class="input-field">
+                    <label for="lieu">Lieu de naissance</label>
+                    <p><input placeholder="Lieu de naissance" oninput="this.className = ''" name="" id="lieu" ></p>
+                </div>
+ 
+                </div>
+                <div class="sexe">
+                   <div class="input-field">
+                    <label for="sexe">Sexe</label>
+                    <p><select name="genre" id="sexe" required>
+                        <option value="" name="sexe">Selectionner le sexe</option>
+                        <option value="H" name="Homme">Homme</option>
+                        <option value="F" name="Femme">Femme</option>
+                    </select></p>
+                </div>
+                <div class="input-field">
+                    <label for="classe">Classe</label>
+                    <p><select id="classe" name="classe" value="" required>
+                        <option value="" name="classe">Selectionner la classe</option>
+                        <option value="6" name="classe">6ème</option>
+                        <option value="5" name="classe">5ème</option>
+                        <option value="4" name="classe">4ème</option>
+                        <option value="3" name="classe">3ème</option>
+                    </select></p>
+                </div>
+ 
+                </div>
+        </Fieldset>
+        <br><br>
+        <fieldset class="fieldset">
+            <div class="tab2" id = "tab-2">
+                    <p >Information du tuteur légal:</p><br>
+                    <div class="tuteur">
+                        <div class="input-field">
+                        <label for="nomtuteur">Nom</label>
+                        <p><input placeholder="Nom du tuteur" oninput="this.className = ''" name="" id="nomtuteur" required ></p>
+                        </div>
+
+                        <div class="input-field">
+                        <label for="prénomtuteur">Prénom</label>
+                        <p><input placeholder="Prenom du tuteur" oninput="this.className = ''" name="" id="prenomtuteur" required></p>
+                        </div>
+
+                    </div>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="profession">profession</label>
+                            <p><input placeholder="Profession" oninput="this.className = ''" name="" id="Professiontuteur" required ></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <p><input type="email" placeholder="Email" oninput="this.className = ''" name="" id="emailtuteur" required ></p>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label for="contact">Numéro de téléphone</label>
+                            <p><input type="tel" placeholder="Numéro de téléphone" oninput="this.className = ''" name="" id="contacttuteur" required></p>
+                        </div>
+                        
+                    </div>
+            </div>                  
+        </fieldset>
+        <br><br>
+        <button class = "index-btn" type="submit" name="submit" style = "background-color: #4070f4; height: 40px; width: 200px; border: none; color: #fff; margin-left: -25px; cursor: pointer;">Envoyer formulaire</button>
+
+    </form>
+<br><br>
+
+
+</div>
+</div>
+<script src="script.js"></script>
+
+  </body>
+</html>
