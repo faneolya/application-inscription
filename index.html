@@ -1,108 +1,185 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Formulaire d'inscription</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  </head>
-  <body>
-    <form id="regForm" action="" method="post" autocomplete = "off">
-      <h1 align = center>Formulaire d'inscription</h1>
-        <Fieldset class="fieldset">
-            <div class="tab" id = "tab-1">
-                <p>Information élève:</p><br>
-                <div class="nom">
-                    <div class="input-field">
-                    <label for="nom">Nom</label>
-                    <p><input placeholder="Nom" oninput="this.className = ''" name="" id="nomeleve" required ></p>
-                </div>
-                <div class="input-field">
-                    <label for="prénom">Prénom</label>
-                    <p><input placeholder="Prénom" oninput="this.className = ''" name="" id="prenomeleve" required ></p>
-                </div>
-   
-                </div>
-                <div class="naissance">
-                    <div class="input-field">
-                    <label for="date">Date de naissance</label>
-                    <p><input type="date" placeholder="Date de naissance" oninput="this.className = ''" name="" id="dateeleve" ></p>
-                </div>
 
-                <div class="input-field">
-                    <label for="lieu">Lieu de naissance</label>
-                    <p><input placeholder="Lieu de naissance" oninput="this.className = ''" name="" id="lieu" ></p>
-                </div>
- 
-                </div>
-                <div class="sexe">
-                   <div class="input-field">
-                    <label for="sexe">Sexe</label>
-                    <p><select name="genre" id="sexe" required>
-                        <option value="" name="sexe">Selectionner le sexe</option>
-                        <option value="H" name="Homme">Homme</option>
-                        <option value="F" name="Femme">Femme</option>
-                    </select></p>
-                </div>
-                <div class="input-field">
-                    <label for="classe">Classe</label>
-                    <p><select id="classe" name="classe" value="" required>
-                        <option value="" name="classe">Selectionner la classe</option>
-                        <option value="6" name="classe">6ème</option>
-                        <option value="5" name="classe">5ème</option>
-                        <option value="4" name="classe">4ème</option>
-                        <option value="3" name="classe">3ème</option>
-                    </select></p>
-                </div>
- 
-                </div>
-        </Fieldset>
-        <br><br>
-        <fieldset class="fieldset">
-            <div class="tab2" id = "tab-2">
-                    <p >Information du tuteur légal:</p><br>
-                    <div class="tuteur">
-                        <div class="input-field">
-                        <label for="nomtuteur">Nom</label>
-                        <p><input placeholder="Nom du tuteur" oninput="this.className = ''" name="" id="nomtuteur" required ></p>
-                        </div>
+<head>
+  <meta charset="utf-8">
+  <title>Formulaire d'inscription</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-                        <div class="input-field">
-                        <label for="prénomtuteur">Prénom</label>
-                        <p><input placeholder="Prenom du tuteur" oninput="this.className = ''" name="" id="prenomtuteur" required></p>
-                        </div>
+<body>
 
-                    </div>
-                    <div class="fields">
-                        <div class="input-field">
-                            <label for="profession">profession</label>
-                            <p><input placeholder="Profession" oninput="this.className = ''" name="" id="Professiontuteur" required ></p>
-                        </div>
-
-                        <div class="input-field">
-                            <label for="email">Email</label>
-                            <p><input type="email" placeholder="Email" oninput="this.className = ''" name="" id="emailtuteur" required ></p>
-                        </div>
-                        
-                        <div class="input-field">
-                            <label for="contact">Numéro de téléphone</label>
-                            <p><input type="tel" placeholder="Numéro de téléphone" oninput="this.className = ''" name="" id="contacttuteur" required></p>
-                        </div>
-                        
-                    </div>
-            </div>                  
-        </fieldset>
-        <br><br>
-        <button class = "index-btn" type="submit" name="submit" style = "background-color: #4070f4; height: 40px; width: 200px; border: none; color: #fff; margin-left: -25px; cursor: pointer;">Envoyer formulaire</button>
-
-    </form>
-<br><br>
+  <form id="regForm" action="" method="post" autocomplete="off">
+    <h1 align=center>Formulaire d'inscription:</h1>
 
 
+    <div class="tab" id="tab-1">
+      <p>Informations de l'éleve:</p>
+
+      <label for="nom">Nom</label>
+      <p><input placeholder="Nom" oninput="this.className = ''" name="" id="nom" required ></p>
+
+      <label for="prénom">Prénom</label>
+      <p><input placeholder="Prénom" oninput="this.className = ''" name="" id="prenom" required ></p>
+
+      <label for="date">Date de naissance</label>
+      <p><input type="date" placeholder="Date de naissance" oninput="this.className = ''" name="" id="date" ></p>
+
+      <label for="lieu">Lieu de naissance</label>
+      <p><input placeholder="Lieu de naissance" oninput="this.className = ''" name="" id="lieuNaiss" ></p>    
+
+      <label for="sexe">Sexe</label>
+      <p><select name="genre" id="sexe" required>
+          <option value="" name="sexe">Selectionner le sexe</option>
+          <option value="H" name="Homme">Homme</option>
+          <option value="F" name="Femme">Femme</option>
+      </select></p>
+
+      <label for="classe">Classe</label>
+      <p><select id="classe" name="classe" value="" required>
+          <option value="" name="classe">Selectionner la classe</option>
+          <option value="6" name="classe">6ème</option>
+          <option value="5" name="classe">5ème</option>
+          <option value="4" name="classe">4ème</option>
+          <option value="3" name="classe">3ème</option>
+      </select></p>
+
+      <div class="index-btn-wrapper">
+        <div class="index-btn" onclick="run(1, 2);">Suivant <ion-icon class="icon" name="arrow-forward-sharp"></ion-icon>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <span class="step" id="step-1">1</span>
+        <span class="step" id="step-2">2</span>
+      </div>
+  
+    </div>
+
+
+    <div class="tab" id="tab-2">  
+      <p>Informations du tuteur:</p>
+      <label for="nomtuteur">Nom</label>
+      <p><input placeholder="Nom" oninput="this.className = ''" name="" id="Tnom" ></p>
+
+      <label for="prénomtuteur">Prénom</label>
+      <p><input placeholder="Prenom du tuteur" oninput="this.className = ''" name="" id="Tprenom" required></p>
+
+      <label for="profession">profession</label>
+      <p><input placeholder="Profession" oninput="this.className = ''" name="" id="TProfession" required ></p>
+
+      <label for="email">Email</label>
+      <p><input type="email" placeholder="Email" oninput="this.className = ''" name="" id="Temail" required ></p>
+
+      <label for="contact">Numéro de téléphone</label>
+      <p><input type="tel" placeholder="Numéro de téléphone" oninput="this.className = ''" name="" id="Tcontact" required></p>
+    
+      <div class="index-btn" onclick="run(2, 1);">Précédant</div>
+      <button class="btn" type="submit" name="submit" >Envoyer formulaire</button>
+                
+    </div>
+
+  </form>
+
+  <div class="view"  id="modal">
+
+    <h2>Informations de l'élève</h2><br>
+    <table style="width: 100%;" class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Age</th>
+                <th>Sexe</th>
+                <th>Classe</th>
+                
+            </tr>
+        </thead>
+        <tbody id="eleves">
+            
+        </tbody>
+    </table>
+    <hr><br><br>
+    <h2>Informations du tuteur</h2><br>
+    <table style="width: 100%;" class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Profession</th>
+                <th>Adresse mail</th>
+                <th>Numero de Téléphone</th>
+                
+            </tr>
+        </thead>
+        <tbody id="parents">
+          
+        </tbody>
+    </table>
 </div>
-</div>
-<script src="script.js"></script>
 
-  </body>
+
+  
+  <section class="inscr-list pos">
+    <h3>Liste des élèves inscris</h3>
+    <div class="list" id="inscr-list"></div>
+  </section>
+
+
+  <script>
+    // Default tab
+    $(".tab").css("display", "none");
+    $("#tab-1").css("display", "block");
+
+    function run(hideTab, showTab) {
+      if (hideTab < showTab) { // If not press previous button
+        // Validation if press next button
+        var currentTab = 0;
+        x = $('#tab-' + hideTab);
+        y = $(x).find("input")
+        for (i = 0; i < y.length; i++) {
+          if (y[i].value == "") {
+            $(y[i]).css("background", "#ffdddd");
+            return false;
+          }
+        }
+      }
+
+      // Progress bar
+      for (i = 1; i < showTab; i++) {
+        $("#step-" + i).css("opacity", "1");
+      }
+
+      // Switch tab
+      $("#tab-" + hideTab).css("display", "none");
+      $("#tab-" + showTab).css("display", "block");
+      $("input").css("background", "#fff");
+    }
+
+
+
+
+// LOCALE STORAGE
+
+
+
+// localStorage.setItem("nom", "ink ");
+
+// document.getElementById("demo").innerHTML = localStorage.getItem("nom");
+
+
+
+// localStorage.removeItem("nom")
+
+
+  </script>
+
+  <script src="./java.js"></script>
+
+</body>
+
 </html>
+
+
+<!-- e.target.elements.nom.value  --- recupere le contenu du champ input via l'id -->
